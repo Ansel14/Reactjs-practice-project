@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    @apply m-0 font-quickSand text-[#333];
+  }
+  .container {
+    @apply max-w-[1600px] mx-auto my-10 p-5;
+  }
+  h1 {
+    @apply text-3xl font-bold;
+  }
+  h2 {
+    @apply text-2xl font-bold;
+  }
+  h3 {
+    @apply text-xl font-bold;
+  }
+  h4 {
+    @apply text-lg font-bold;
+  }
+  h5 {
+    @apply text-base font-bold;
+  }
+  h6 {
+    @apply text-sm font-bold;
+  }
+}
+
+@layer components {
+  /* navbar */
+  .navbar {
+    @apply flex items-center max-w-[1600px] mx-auto my-0 p-5 border-b-light border-b border-solid;
+  }
+  .navbar h1 {
+    @apply text-primary;
+  }
+  .navbar .links {
+    @apply ml-auto;
+  }
+  .navbar a {
+    @apply no-underline ml-4 p-1.5 hover:text-primary;
+  }
+  /* blog preview */
+  .blog-preview {
+    @apply border-b-neutral-50 mx-0 my-5 px-4 py-2.5 border-b border-solid hover:shadow-[1px_3px_5px_rgba(0,0,0,0.1)];
+  }
+  .blog-preview h2 {
+    @apply text-xl text-primary mb-2;
+  }
+  .blog-preview a {
+    @apply no-underline;
+  }
+  /* blog details page */
+  .blog-details h2 {
+    @apply text-xl text-primary mb-2.5;
+  }
+  .blog-details div {
+    @apply mx-0 my-5;
+  }
+  .blog-details button {
+    @apply bg-primary text-white cursor-pointer p-2 rounded-lg border-0;
+  }
+  /* create new blog form */
+  .create {
+    @apply max-w-[400px] text-center mx-auto my-0;
+  }
+  .create label {
+    @apply text-left block;
+  }
+  .create h2 {
+    @apply text-xl text-primary mb-[30px];
+  }
+  .create input,
+  .create textarea,
+  .create select {
+    @apply w-full border box-border block mx-0 my-2.5 px-2.5 py-1.5 border-solid border-[#ddd];
+  }
+  .create button {
+    @apply bg-primary text-white cursor-pointer p-2 rounded-lg border-0;
+  }
+}
